@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Diện Tích và Chu Vi</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="div-container">
+        <h1>Tính Diện Tích và Chu Vi</h1>
+        <label for="shape">Chọn hình:</label>
+        <select id="shape">
+            <option value="rectangle">Hình Chữ Nhật</option>
+            <option value="circle">Hình Tròn</option>
+            <option value="triangle">Hình Tam Giác</option>
+        </select>
+
+        <div id="inputs">
+            <div id="rectangleInputs" class="shapeInputs">
+                <label for="length">Chiều dài:</label>
+                <input type="number" id="length" required>
+                <label for="width">Chiều rộng:</label>
+                <input type="number" id="width" required>
+            </div>
+
+            <div id="circleInputs" class="shapeInputs" style="display:none;">
+                <label for="radius">Bán kính:</label>
+                <input type="number" id="radius" required>
+            </div>
+
+            <div id="triangleInputs" class="shapeInputs" style="display:none;">
+                <label for="base">Cạnh đáy:</label>
+                <input type="number" id="base" required>
+                <label for="height">Chiều cao:</label>
+                <input type="number" id="height" required>
+            </div>
+        </div>
+
+        <button onclick="calculate()">Tính Toán</button>
+
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
